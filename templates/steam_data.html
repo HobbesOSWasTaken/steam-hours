@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon-96x96.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon.ico') }}">
+<html>
+<head>
+    <title>Steam Data</title>
+</head>
+<div class="row">
+  <div class="column">
+    <input type="button" value="Back" onclick="window.history.back()" />
+  </div>
+  <div class="column">
+    <ul>
+		<li>{{ user }}</li>
+		<li>{{ total_time_played }}</li>
+	{% for i in games %}
+		<li>{{ i }}</li>
+	{% endfor %}
+	<ul>
+  </div>
+</div>
